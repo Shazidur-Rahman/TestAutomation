@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.GeckoDriverInfo;
 import org.openqa.selenium.opera.OperaDriver;
 
 public class BaseClass {
@@ -12,14 +11,15 @@ public class BaseClass {
     public static WebDriver driver;
 
     public static void main(String[] args) {
-        chrome_launce();
-        open_URL();
+        //chrome_launce();
+        //open_URL();
         //opera_launce();
-        //firefox_launce();
+        firefox_launce();
+        open_URL();
         //edge_launce();
-        chrome_close();
+        //chrome_close();
         //opera_close();
-        //firefox_close();
+        firefox_close();
         //edge_close();
     }
     public static  void chrome_launce(){
@@ -50,9 +50,7 @@ public class BaseClass {
     public static  void edge_close(){
         driver.close();
     }
-    public static  void chrome_quit(){
-        driver.quit();
-    }
+    public static  void chrome_quit(){driver.quit();}
     public static  void firefox_quit(){
         driver.quit();
     }
